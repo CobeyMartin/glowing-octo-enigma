@@ -4,6 +4,11 @@
   "description": "Exposes VS Code Language Model API via local HTTP server on localhost:3434",
   "version": "0.0.1",
   "publisher": "local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CobeyMartin/glowing-octo-enigma.git"
+  },
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.90.0"
   },
