@@ -1,0 +1,40 @@
+{
+  "name": "llm-api-server",
+  "displayName": "LLM API Server",
+  "description": "Exposes VS Code Language Model API via local HTTP server on localhost:3434",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "llm-api.startServer",
+        "title": "LLM API: Start Server"
+      },
+      {
+        "command": "llm-api.stopServer",
+        "title": "LLM API: Stop Server"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.3.0"
+  }
+}
